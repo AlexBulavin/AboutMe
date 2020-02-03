@@ -27,11 +27,14 @@ class MainActivity : AppCompatActivity() {
         //findViewById<Button>(R.id.done_button).setOnClickListener {
         //    addNickname(it)
         binding.doneButton.setOnClickListener {
-            addNickname(it)
+            addNoteToRecipe(it)
+        }
+        binding.nicknameText.setOnClickListener {
+            changeRecipeNote(it)
         }
     }
 
-    private fun addNickname(view: View){
+    private fun addNoteToRecipe(view: View){
 
         binding.apply {
             //binding.nicknameText.text = binding.nicknameEdit.text
@@ -42,8 +45,24 @@ class MainActivity : AppCompatActivity() {
             binding.nicknameText.visibility = View.VISIBLE
         }
 
+
         // Hide the keyboard.
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
+    }
+
+    private fun changeRecipeNote(view: View){
+
+        binding.apply {
+            //binding.nicknameText.text = binding.nicknameEdit.text
+            nicknameEdit.text = nicknameText.editableText
+            //invalidateAll()myName?.
+            binding.nicknameEdit.visibility = View.VISIBLE
+            binding.doneButton.visibility = View.VISIBLE
+            binding.nicknameText.visibility = View.GONE
+        }
+        // Hide the keyboard.
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.toggleSoftInputFromWindow(view.windowToken, InputMethodManager.SHOW_IMPLICIT, 0)
     }
 }
