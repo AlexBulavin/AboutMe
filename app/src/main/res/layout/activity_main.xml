@@ -26,23 +26,6 @@
 
 
 
-    <TextView
-        android:id="@+id/nickname_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@={myName.nickname}"
-        android:textAlignment="center"
-        android:textAppearance="@style/NameStyle"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/star_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/layout_margin"
-        android:contentDescription="@string/yellow_star"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
     <ScrollView
         android:id="@+id/bio_scroll"
         android:layout_width="match_parent"
@@ -58,12 +41,29 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@android:drawable/ic_menu_view" />
 
+            <ImageView
+                android:id="@+id/star_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:contentDescription="@string/yellow_star"
+                app:srcCompat="@drawable/device_350x600" />
+
             <TextView
                 android:id="@+id/bio_text"
                 style="@style/text_block_spacer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/bio" />
+
+            <TextView
+                android:id="@+id/nickname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={myName.nickname}"
+                android:textAlignment="center"
+                android:textAppearance="@style/NameStyle"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/nickname_edit"
