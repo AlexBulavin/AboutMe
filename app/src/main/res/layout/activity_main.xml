@@ -12,8 +12,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/padding"
-    android:layout_marginEnd="@dimen/padding"
+    android:layout_marginStart="@dimen/small_padding"
+    android:layout_marginEnd="@dimen/small_padding"
     android:orientation="vertical">
 
     <TextView
@@ -21,7 +21,7 @@
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@={myName.name}"
+        android:text="@string/name"
         android:textAlignment="center" />
 
 
@@ -36,10 +36,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_menu_view" />
 
             <ImageView
                 android:id="@+id/star_image"
@@ -74,14 +70,6 @@
                 android:hint="@string/what_is_your_nickname"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
-
-            <Button
-                android:id="@+id/done_button"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/done" />
 
         </LinearLayout>
 
