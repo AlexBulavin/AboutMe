@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.bulavinalex.aboutme.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
@@ -60,9 +58,8 @@ class MainActivity : AppCompatActivity() {
     private fun changeRecipeNote(view: View){
 
         binding.apply {
-            //binding.nicknameText.text = binding.nicknameEdit.text
+
             nicknameEdit.text = nicknameText.editableText
-            //invalidateAll()myName?.
             binding.nicknameEdit.visibility = View.VISIBLE
             binding.nicknameText.visibility = View.GONE
         }
